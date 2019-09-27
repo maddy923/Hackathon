@@ -25,5 +25,5 @@ steps:
     azureSubscription: 'Hackathon'
     appType: 'webApp'
     appName: 'SaiSampleAzure'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(System.DefaultWorkingDirectory)/target/*.jar'
     deploymentMethod: 'auto'

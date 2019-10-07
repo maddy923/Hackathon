@@ -13,6 +13,7 @@ public interface LicenseRepository extends JpaRepository<License, LicenseKey> {
 
     License findOneByLicenseId(@Param("licenseId") String licenseId);
 
+    License findByAssetId(@Param("assetId") String assetId);
 
     @Query("select count(*) from License")
     int findLicenseCount();

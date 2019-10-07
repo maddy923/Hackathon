@@ -1,5 +1,6 @@
 package com.test.azure.controller;
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Assets;
 import com.test.azure.Service.AssetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +29,10 @@ public class AssetsController {
     }
 
     @GetMapping(value="/assets/{asset_id}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public Assets assets(@PathVariable("asset_id") String assetId){
+    public AssetDTO assets(@PathVariable("asset_id") String assetId){
 
         return assetService.getAssetById(assetId);
     }
-
-
 
 
 }

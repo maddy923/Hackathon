@@ -8,7 +8,6 @@ public class LicenseKey implements Serializable{
     @Column(name="LicenceID")
     private String licenseId;
 
-
     @Column(name="AssetID")
     private String assetID;
 

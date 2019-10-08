@@ -26,8 +26,10 @@ public class AssetServiceImpl implements AssetService {
 
 
     @Override
-    public List<Assets> getAssets() {
-        return assetsRepository.findAll();
+    public AssetDTO getAssets() {
+            AssetDTO a = new AssetDTO();
+            a.setAssets(assetsRepository.findAll());
+            return a;
     }
 
     @Override

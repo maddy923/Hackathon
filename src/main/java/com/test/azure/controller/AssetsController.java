@@ -24,7 +24,7 @@ public class AssetsController {
 
 
     @GetMapping(value="/assets",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Assets> assets(){
+    public AssetDTO assets(){
 
         return assetService.getAssets();
     }

@@ -6,7 +6,7 @@ import com.test.azure.Domain.Assets;
 import java.util.List;
 
 public interface AssetService {
-    List<Assets>  getAssets();
+    AssetDTO  getAssets();
 
     AssetDTO getAssetById(String assetId);
 }

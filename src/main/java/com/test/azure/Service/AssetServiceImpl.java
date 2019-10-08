@@ -40,23 +40,7 @@ public class AssetServiceImpl implements AssetService {
 
         List<Consumables> consumablesList = assetRepositoryCustom.findConsumablesByAssetId(assetId);
 
-
-        List<MaintenanceLogDTO> maintenancelogList = new ArrayList<>();
-        MaintenanceLogDTO maintenancelog1 = new MaintenanceLogDTO();
-        MaintenanceLogDTO maintenancelog2 = new MaintenanceLogDTO();
-
-        maintenancelog1.setAsset_id("A0001");
-        maintenancelog1.setChange_log_id("c123");
-        maintenancelog1.setDescription("Instanlled Sql");
-        maintenancelog1.setModified_date("2019-01-01");
-
-        maintenancelog2.setAsset_id("A0001");
-        maintenancelog2.setChange_log_id("c123");
-        maintenancelog2.setDescription("Instanlled Sql");
-        maintenancelog2.setModified_date("2019-01-01");
-
-        maintenancelogList.add(maintenancelog1);
-        maintenancelogList.add(maintenancelog2);
+        List<MaintenanceLogDTO> maintenancelogList = assetRepositoryCustom.findMaintenanceLogDTOByAssetId(assetId);
 
         assetDTO.setAssets(assetsRepository.findOneByAssetID(assetId));
         assetDTO.setMaintenancelogs(maintenancelogList);

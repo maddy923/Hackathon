@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Assets")
+@Table(name = "MaintenanceLog")
 @IdClass(MaintenanceLogKey.class)
 public class MaintenanceLogDTO implements Serializable {
 

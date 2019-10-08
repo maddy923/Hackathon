@@ -50,6 +50,10 @@ public class AssetRepositoryImpl implements AssetRepositoryCustom {
 
     @Override
     public List<MaintenanceLogDTO> findMaintenanceLogDTOByAssetId(String assetId) {
-        return null;
+        String query = "SELECT * FROM MaintenanceLog m where m.asset_id='" + assetId + "' ";
+
+        Query query1 = entityManager.createNativeQuery(query,MaintenanceLogDTO.class) ;
+
+        return query1.getResultList();
     }
 }

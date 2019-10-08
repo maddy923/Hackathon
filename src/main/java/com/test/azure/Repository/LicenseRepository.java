@@ -1,21 +1,18 @@
 package com.test.azure.Repository;
 
-import com.test.azure.Domain.Assets;
-import com.test.azure.Domain.License;
-import com.test.azure.Domain.LicenseKey;
+import com.test.azure.Domain.Licenses;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LicenseRepository extends JpaRepository<License, LicenseKey> {
+public interface LicenseRepository extends JpaRepository<Licenses, String> {
 
-    License findOneByLicenseId(@Param("licenseId") String licenseId);
+    @Query("select l from Licenses l where l.license_id = :license_id")
+    Licenses findOneByLicenseId(@Param("license_id") String license_id);
 
-    License findByAssetId(@Param("assetId") String assetId);
-
-    @Query("select count(*) from License")
+    @Query("select count(*) from Licenses")
     int findLicenseCount();
 }
 

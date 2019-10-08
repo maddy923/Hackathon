@@ -16,6 +16,7 @@ public class AssetsController {
 
     private AssetService assetService;
 
+
     @Autowired
     public AssetsController( AssetService assetService){
         this.assetService=assetService;
@@ -30,6 +31,7 @@ public class AssetsController {
 
     @GetMapping(value="/assets/{asset_id}",produces = MediaType.APPLICATION_JSON_VALUE)
     public AssetDTO assets(@PathVariable("asset_id") String assetId){
+
 
         return assetService.getAssetById(assetId);
     }

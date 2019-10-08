@@ -9,7 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AssetsRepository extends JpaRepository<Assets, String> {
 
-    Assets findOneByAssetId(@Param("assetId") String assetId);
+    @Query("select a from Assets a where a.asset_id = :asset_id")
+    Assets findOneByAssetID(@Param("asset_id") String asset_id);
 
     @Query("select count(*) from Assets")
     int findAssetCount();

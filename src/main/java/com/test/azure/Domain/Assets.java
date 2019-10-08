@@ -1,7 +1,5 @@
 package com.test.azure.Domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -56,14 +54,14 @@ public class Assets implements Serializable{
     @Column(name="manufacturer_id")
     private String manufacturer_id;
 
-    public String getAsset_ad()
+    public String getAsset_id()
     {
         return asset_id;
     }
 
-    public void setAsset_ad(String asset_ad)
+    public void setAsset_id(String asset_id)
     {
-        this.asset_id = asset_ad;
+        this.asset_id = asset_id;
     }
 
     public String getName()

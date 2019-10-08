@@ -2,9 +2,7 @@ package com.test.azure.Service;
 
 import com.test.azure.Domain.CountDTO;
 import com.test.azure.Domain.ProductDTO;
-import com.test.azure.Repository.AssetsRepository;
-import com.test.azure.Repository.LicenseRepository;
-import com.test.azure.Repository.SharedServiceRepository;
+import com.test.azure.Repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +15,17 @@ public class SharedServiceImpl implements SharedService{
 
     private  final LicenseRepository licenseRepository;
 
+    private final PeripheralRepository peripheralRepository;
+
+    private  final ConsumableRepository consumableRepository;
+
     @Autowired
-    public SharedServiceImpl(SharedServiceRepository sharedServiceRepository, AssetsRepository assetsRepository, LicenseRepository licenseRepository){
+    public SharedServiceImpl(SharedServiceRepository sharedServiceRepository, AssetsRepository assetsRepository, LicenseRepository licenseRepository, PeripheralRepository peripheralRepository, ConsumableRepository consumableRepository){
         this.sharedServiceRepository= sharedServiceRepository;
         this.assetsRepository = assetsRepository;
         this.licenseRepository = licenseRepository;
+        this.peripheralRepository = peripheralRepository;
+        this.consumableRepository = consumableRepository;
     }
 
 
@@ -36,8 +40,8 @@ public class SharedServiceImpl implements SharedService{
         CountDTO countDTO = new CountDTO();
         countDTO.setAssetCount(assetsRepository.findAssetCount());
         countDTO.setLicenseCount(licenseRepository.findLicenseCount());
-        countDTO.setConsumableCount(10);
-        countDTO.setAccessorieCount(25);
+        countDTO.setConsumableCount(consumableRepository.findConsumablesCount());
+        countDTO.setAccessorieCount(peripheralRepository.findPeripheralsCount());
         return countDTO;
     }
 

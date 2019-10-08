@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface AssetService {
     List<Assets>  getAssets();
+
     AssetDTO getAssetById(String assetId);
 }

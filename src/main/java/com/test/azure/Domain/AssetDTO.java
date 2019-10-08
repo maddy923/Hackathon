@@ -1,9 +1,9 @@
 package com.test.azure.Domain;
 
-import java.util.List;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AssetDTO {
@@ -12,10 +12,16 @@ public class AssetDTO {
     private Assets assets;
 
     @JsonProperty("licenses")
-    private List<License> licenses = null;
+    private List<Licenses> licenses = new ArrayList<>();
 
-    @JsonProperty("maintenancelogs")
-    private List<Maintenancelog> maintenancelogs = null;
+    @JsonProperty("maintenance_logs")
+    private List<MaintenanceLogDTO> maintenancelogs = new ArrayList<>();
+
+    @JsonProperty("peripherals")
+    private List<Peripherals> peripherals = new ArrayList<>();
+
+    @JsonProperty("consumables")
+    private List<Consumables> consumables = new ArrayList<>();
 
 
     public Assets getAssets()
@@ -28,23 +34,39 @@ public class AssetDTO {
         this.assets = assets;
     }
 
-    public List<License> getLicenses()
+    public List<Licenses> getLicenses()
     {
         return licenses;
     }
 
-    public void setLicenses(List<License> licenses)
+    public void setLicenses(List<Licenses> licenses)
     {
         this.licenses = licenses;
     }
 
-    public List<Maintenancelog> getMaintenancelogs()
+    public List<MaintenanceLogDTO> getMaintenancelogs()
     {
         return maintenancelogs;
     }
 
-    public void setMaintenancelogs(List<Maintenancelog> maintenancelogs)
+    public void setMaintenancelogs(List<MaintenanceLogDTO> maintenancelogs)
     {
         this.maintenancelogs = maintenancelogs;
+    }
+
+    public List<Peripherals> getPeripherals() {
+        return peripherals;
+    }
+
+    public void setPeripherals(List<Peripherals> peripherals) {
+        this.peripherals = peripherals;
+    }
+
+    public List<Consumables> getConsumables() {
+        return consumables;
+    }
+
+    public void setConsumables(List<Consumables> consumables) {
+        this.consumables = consumables;
     }
 }

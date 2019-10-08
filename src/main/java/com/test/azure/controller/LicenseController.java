@@ -1,6 +1,6 @@
 package com.test.azure.controller;
 
-import com.test.azure.Domain.License;
+import com.test.azure.Domain.Licenses;
 import com.test.azure.Service.LicenseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,13 +23,13 @@ public class LicenseController {
 
 
     @GetMapping(value="/licenses",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<com.test.azure.Domain.License> licenses(){
+    public List<Licenses> licenses(){
 
         return licenseService.getLicenses();
     }
 
     @GetMapping(value="/licenses/{license_id}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public License license(@PathVariable("license_id") String licenseId){
+    public Licenses license(@PathVariable("license_id") String licenseId){
 
         return licenseService.getLicense(licenseId);
     }

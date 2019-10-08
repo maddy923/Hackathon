@@ -1,6 +1,7 @@
 package com.test.azure.Service;
 
-import com.test.azure.Domain.License;
+
+import com.test.azure.Domain.Licenses;
 import com.test.azure.Repository.LicenseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,11 +18,11 @@ public class LicenseService {
         this.licenseRepository= licenseRepository;
     }
 
-    public List<License> getLicenses() {
+    public List<Licenses> getLicenses() {
         return licenseRepository.findAll();
     }
 
-    public License getLicense(String licenseId) {
+    public Licenses getLicense(String licenseId) {
         return licenseRepository.findOneByLicenseId(licenseId);
     }
 }

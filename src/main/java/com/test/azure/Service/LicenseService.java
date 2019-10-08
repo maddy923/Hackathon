@@ -1,6 +1,7 @@
 package com.test.azure.Service;
 
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Licenses;
 import com.test.azure.Repository.LicenseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,10 @@ public class LicenseService {
         this.licenseRepository= licenseRepository;
     }
 
-    public List<Licenses> getLicenses() {
-        return licenseRepository.findAll();
+    public AssetDTO getLicenses() {
+        AssetDTO a = new AssetDTO();
+        a.setLicenses(licenseRepository.findAll());
+        return a;
     }
 
     public Licenses getLicense(String licenseId) {

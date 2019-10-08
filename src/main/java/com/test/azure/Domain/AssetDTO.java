@@ -8,8 +8,11 @@ import java.util.List;
 
 public class AssetDTO {
 
+    @JsonProperty("asset_id")
+    private String assetId;
+
     @JsonProperty("asset_details")
-    private Assets assets;
+    private List<Assets> assets;
 
     @JsonProperty("licenses")
     private List<Licenses> licenses = new ArrayList<>();
@@ -24,12 +27,20 @@ public class AssetDTO {
     private List<Consumables> consumables = new ArrayList<>();
 
 
-    public Assets getAssets()
+    public String getAssetId() {
+        return assetId;
+    }
+
+    public void setAssetId(String assetId) {
+        this.assetId = assetId;
+    }
+    
+    public List<Assets> getAssets()
     {
         return assets;
     }
 
-    public void setAssets(Assets assets)
+    public void setAssets(List<Assets> assets)
     {
         this.assets = assets;
     }

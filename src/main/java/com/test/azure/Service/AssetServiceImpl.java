@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -42,7 +43,8 @@ public class AssetServiceImpl implements AssetService {
 
         List<MaintenanceLogDTO> maintenancelogList = assetRepositoryCustom.findMaintenanceLogDTOByAssetId(assetId);
 
-        assetDTO.setAssets(assetsRepository.findOneByAssetID(assetId));
+        assetDTO.setAssetId(assetId);
+        assetDTO.setAssets(Arrays.asList(assetsRepository.findOneByAssetID(assetId)));
         assetDTO.setMaintenancelogs(maintenancelogList);
         assetDTO.setLicenses(licenseList);
         assetDTO.setPeripherals(peripheralsList);

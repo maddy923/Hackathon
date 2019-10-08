@@ -1,5 +1,6 @@
 package com.test.azure.controller;
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Peripherals;
 import com.test.azure.Service.PeripheralsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class PeripheralController {
     }
 
     @GetMapping(value="/peripherals",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Peripherals> peripherals(){
+    public AssetDTO peripherals(){
 
         return peripheralsService.getPeripherals();
     }

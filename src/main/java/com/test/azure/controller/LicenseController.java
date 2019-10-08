@@ -1,5 +1,6 @@
 package com.test.azure.controller;
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Licenses;
 import com.test.azure.Service.LicenseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class LicenseController {
 
 
     @GetMapping(value="/licenses",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Licenses> licenses(){
+    public AssetDTO licenses(){
 
         return licenseService.getLicenses();
     }

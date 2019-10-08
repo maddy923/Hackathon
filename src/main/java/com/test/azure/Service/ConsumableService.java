@@ -1,5 +1,6 @@
 package com.test.azure.Service;
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Consumables;
 import com.test.azure.Repository.ConsumableRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,10 @@ public class ConsumableService {
         this.consumableRepository = consumableRepository;
     }
 
-    public List<Consumables> getConsumables() {
-        return consumableRepository.findAll();
+    public AssetDTO getConsumables() {
+        AssetDTO a = new AssetDTO();
+        a.setConsumables(consumableRepository.findAll());
+        return a;
     }
 
 }

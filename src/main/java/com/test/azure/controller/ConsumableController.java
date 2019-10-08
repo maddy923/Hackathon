@@ -1,6 +1,7 @@
 package com.test.azure.controller;
 
 
+import com.test.azure.Domain.AssetDTO;
 import com.test.azure.Domain.Consumables;
 import com.test.azure.Service.ConsumableService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ConsumableController {
 
 
     @GetMapping(value="/consumables",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Consumables> consumables(){
+    public AssetDTO consumables(){
 
         return consumableService.getConsumables();
     }

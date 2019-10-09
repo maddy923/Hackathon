@@ -32,7 +32,7 @@ public class Consumables implements Serializable
 
     public String getConsumable_id()
     {
-        return consumable_id;
+        return "Consumable ID: "+consumable_id.trim();
     }
 
     public void setConsumable_id(String consumable_id)
@@ -42,7 +42,7 @@ public class Consumables implements Serializable
 
     public String getName()
     {
-        return name;
+        return "Name: "+name.trim();
     }
 
     public void setName(String name)
@@ -52,7 +52,7 @@ public class Consumables implements Serializable
 
     public String getModel_no()
     {
-        return model_no;
+        return "Model No: "+model_no.trim();
     }
 
     public void setModel_no(String model_no)
@@ -62,7 +62,7 @@ public class Consumables implements Serializable
 
     public String getItem_no()
     {
-        return item_no;
+        return "Item No: "+item_no.trim();
     }
 
     public void setItem_no(String item_no)
@@ -72,7 +72,7 @@ public class Consumables implements Serializable
 
     public String getManufacturer_id()
     {
-        return manufacturer_id;
+        return "Manufaturer ID: "+manufacturer_id.trim();
     }
 
     public void setManufacturer_id(String manufacturer_id)
@@ -82,7 +82,7 @@ public class Consumables implements Serializable
 
     public String getTotal_consumables()
     {
-        return total_consumables;
+        return "Total Consumables: "+ total_consumables.trim();
     }
 
     public void setTotal_consumables(String total_consumables)

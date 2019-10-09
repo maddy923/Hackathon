@@ -23,7 +23,7 @@ public class MaintenanceLogDTO implements Serializable {
     private String modified_date;
 
     public String getAsset_id() {
-        return asset_id;
+        return "Asset ID: " + asset_id.trim();
     }
 
     public void setAsset_id(String asset_id) {
@@ -31,7 +31,7 @@ public class MaintenanceLogDTO implements Serializable {
     }
 
     public String getChange_log_id() {
-        return change_log_id;
+        return "Change Log ID: "+change_log_id.trim();
     }
 
     public void setChange_log_id(String change_log_id) {
@@ -39,7 +39,7 @@ public class MaintenanceLogDTO implements Serializable {
     }
 
     public String getDescription() {
-        return description;
+        return "Description: "+description.trim();
     }
 
     public void setDescription(String description) {
@@ -47,7 +47,7 @@ public class MaintenanceLogDTO implements Serializable {
     }
 
     public String getModified_date() {
-        return modified_date;
+        return "Modified Date: "+modified_date.trim();
     }
 
     public void setModified_date(String modified_date) {

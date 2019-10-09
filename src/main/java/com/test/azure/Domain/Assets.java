@@ -49,24 +49,24 @@ public class Assets implements Serializable{
     private String category;
 
     @Column(name="purchase_date")
-    private Date purchase_date;
+    private String purchase_date;
 
     @Column(name="manufacturer_id")
     private String manufacturer_id;
 
     public String getAsset_id()
     {
-        return asset_id;
+        return "Asset ID: " + asset_id.trim();
     }
 
     public void setAsset_id(String asset_id)
     {
-        this.asset_id = asset_id;
+        this.asset_id =  asset_id;
     }
 
     public String getName()
     {
-        return name;
+        return "Name: " + name.trim();
     }
 
     public void setName(String name)
@@ -76,7 +76,7 @@ public class Assets implements Serializable{
 
     public String getUser_id()
     {
-        return user_id;
+        return "User ID: " + user_id.trim();
     }
 
     public void setUser_id(String user_id)
@@ -86,7 +86,7 @@ public class Assets implements Serializable{
 
     public String getLocation()
     {
-        return location;
+        return "Location: " + location.trim();
     }
 
     public void setLocation(String location)
@@ -96,7 +96,7 @@ public class Assets implements Serializable{
 
     public String getHardware_status()
     {
-        return hardware_status;
+        return "Hardware Status: " + hardware_status.trim();
     }
 
     public void setHardware_status(String hardware_status)
@@ -106,7 +106,7 @@ public class Assets implements Serializable{
 
     public String getAssignment_group()
     {
-        return assignment_group;
+        return "Assignment Group:" + assignment_group.trim();
     }
 
     public void setAssignment_group(String assignment_group)
@@ -116,7 +116,7 @@ public class Assets implements Serializable{
 
     public String getNetwork_connected()
     {
-        return network_connected;
+        return "Network Connection: "+network_connected.trim();
     }
 
     public void setNetwork_connected(String network_connected)
@@ -126,7 +126,7 @@ public class Assets implements Serializable{
 
     public String getFda_state()
     {
-        return fda_state;
+        return "FDA State: "+fda_state.trim();
     }
 
     public void setFda_state(String fda_state)
@@ -136,7 +136,7 @@ public class Assets implements Serializable{
 
     public String getPoid()
     {
-        return poid;
+        return "Purchase Order ID:" + poid.trim();
     }
 
     public void setPoid(String poid)
@@ -146,7 +146,7 @@ public class Assets implements Serializable{
 
     public String getSerial_no()
     {
-        return serial_no;
+        return "Serial No: " + serial_no.trim();
     }
 
     public void setSerial_no(String serial_no)
@@ -156,7 +156,7 @@ public class Assets implements Serializable{
 
     public String getModel_no()
     {
-        return model_no;
+        return "Model No:" + model_no.trim();
     }
 
     public void setModel_no(String model_no)
@@ -166,7 +166,7 @@ public class Assets implements Serializable{
 
     public String getCategory()
     {
-        return category;
+        return "Category: " + category.trim();
     }
 
     public void setCategory(String category)
@@ -174,19 +174,19 @@ public class Assets implements Serializable{
         this.category = category;
     }
 
-    public Date getPurchase_date()
+    public String getPurchase_date()
     {
-        return purchase_date;
+        return "Purchase Date: " + purchase_date.trim();
     }
 
-    public void setPurchase_date(Date purchase_date)
+    public void setPurchase_date(String purchase_date)
     {
         this.purchase_date = purchase_date;
     }
 
     public String getManufacturer_id()
     {
-        return manufacturer_id;
+        return "Manufacturer ID: "+ manufacturer_id.trim();
     }
 
     public void setManufacturer_id(String manufacturer_id)

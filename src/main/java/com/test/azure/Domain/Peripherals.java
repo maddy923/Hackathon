@@ -32,7 +32,7 @@ public class Peripherals implements Serializable
 
     public String getPeripheral_id()
     {
-        return peripheral_id;
+        return "Peripheral ID: "+peripheral_id.trim();
     }
 
     public void setPeripheral_id(String peripheral_id)
@@ -42,7 +42,7 @@ public class Peripherals implements Serializable
 
     public String getName()
     {
-        return name;
+        return "Name: "+name.trim();
     }
 
     public void setName(String name)
@@ -52,7 +52,7 @@ public class Peripherals implements Serializable
 
     public String getCategory()
     {
-        return category;
+        return "Category: "+category.trim();
     }
 
     public void setCategory(String category)
@@ -62,7 +62,7 @@ public class Peripherals implements Serializable
 
     public String getModel_no()
     {
-        return model_no;
+        return "Model No: "+model_no.trim();
     }
 
     public void setModel_no(String model_no)
@@ -72,7 +72,7 @@ public class Peripherals implements Serializable
 
     public String getTotal_peripherals()
     {
-        return total_peripherals;
+        return "Total Peripherals: "+total_peripherals.trim();
     }
 
     public void setTotal_peripherals(String total_peripherals)
@@ -82,7 +82,7 @@ public class Peripherals implements Serializable
 
     public String getManufacturer_id()
     {
-        return manufacturer_id;
+        return "Manufacturer ID: "+manufacturer_id.trim();
     }
 
     public void setManufacturer_id(String manufacturer_id)

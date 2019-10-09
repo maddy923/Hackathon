@@ -32,7 +32,7 @@ public class Licenses implements Serializable {
 
     public String getLicense_id()
     {
-        return license_id;
+        return "License ID: " + license_id.trim();
     }
 
     public void setLicense_id(String license_id)
@@ -42,7 +42,7 @@ public class Licenses implements Serializable {
 
     public String getProduct_key()
     {
-        return product_key;
+        return "Product Key: " + product_key.trim();
     }
 
     public void setProduct_key(String product_key)
@@ -52,7 +52,7 @@ public class Licenses implements Serializable {
 
     public String getExpiration_date()
     {
-        return expiration_date;
+        return "Expiration Date: " + expiration_date.trim();
     }
 
     public void setExpiration_date(String expiration_date)
@@ -62,7 +62,7 @@ public class Licenses implements Serializable {
 
     public String getTotal_licenses()
     {
-        return total_licenses;
+        return "Total Licenses: " + total_licenses.trim();
     }
 
     public void setTotal_licenses(String total_licenses)
@@ -72,7 +72,7 @@ public class Licenses implements Serializable {
 
     public String getManufacturer_id()
     {
-        return manufacturer_id;
+        return "Manufacturer ID: " + manufacturer_id;
     }
 
     public void setManufacturer_id(String manufacturer_id)
@@ -82,7 +82,7 @@ public class Licenses implements Serializable {
 
     public String getSoftware_id()
     {
-        return software_id;
+        return null==software_id ? "" : "Software ID: " + software_id.trim();
     }
 
     public void setSoftware_id(String software_id)

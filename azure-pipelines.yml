@@ -24,7 +24,7 @@ steps:
   inputs:
     azureSubscription: 'Hackathon'
     appType: 'webApp'
-    appName: 'SaiSampleAzure'
+    appName: 'stepupinventory'
     package: '$(System.DefaultWorkingDirectory)/target/*.war'
     deploymentMethod: 'auto'
 

@@ -23,7 +23,7 @@ public class SharedController {
 
     @RequestMapping("")
     public String welcome(){
-        return "Welcome User!";
+        return "Hi User, Welcome to the Asset Inventory Management Application!";
     }
 
 
